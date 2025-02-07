@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+<class name="class-name" table="table-name">
+<id name="property-name" length="12">
+	<generator class="increment"/>
+</id>
+<property name="columnname" column=""></property>
+<property name="columnname" column=""></property>
+<property name="columnname" column=""></property>
+<property name="columnname" column=""></property>
+<property name="columnname" column=""></property>
+</class>
+</hibernate-mapping>
