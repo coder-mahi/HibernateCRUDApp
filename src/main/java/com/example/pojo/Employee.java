@@ -13,7 +13,7 @@ public class Employee {
     private String lastName;
     private double salary;
 
-    @Embedded
+    // @Embedded
     private Address address;
     public Employee() {}
 

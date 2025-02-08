@@ -1,12 +1,10 @@
 package com.example.pojo;
-
 import jakarta.persistence.Embeddable;
 
-@Embeddable
+// @Embeddable
 public class Address {
     private String city;
     private int pincode;
-
     public Address() {}
 
     public Address(String city, int pincode) {

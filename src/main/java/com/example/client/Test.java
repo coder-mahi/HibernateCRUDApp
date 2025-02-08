@@ -1,26 +1,20 @@
 package com.example.client;
-
-import com.example.DAO.EmployeeDAO;
-import com.example.DAO.EmployeeDAOImpl;
-import com.example.pojo.Address;
-import com.example.pojo.Employee;
-
+import com.example.DAO.*;
+import com.example.pojo.*;
 import java.util.List;
 import java.util.Scanner;
-
 public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         EmployeeDAO employeeDAO = new EmployeeDAOImpl();
         while (true) {
-            System.out.println("\n=== Employee Management System ===");
+            System.out.println("\n***Employee Management System***");
             System.out.println("1. Add Employee");
             System.out.println("2. Get Employee by ID");
             System.out.println("3. Show All Employees");
             System.out.println("4. Delete Employee");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
-            
             int choice = scanner.nextInt();
             scanner.nextLine(); 
             switch (choice) {
@@ -47,13 +41,11 @@ public class Test {
                     employeeDAO.saveEmployee(employee);
                     System.out.println("Employee saved successfully!");
                     break;
-
                 case 2:
                     System.out.print("Enter Employee ID to retrieve: ");
                     int empId = scanner.nextInt();
                     scanner.nextLine();
                     Employee retrievedEmployee = employeeDAO.getEmployee(empId);
-                    
                     if (retrievedEmployee != null) {
                         System.out.println("Retrieved Employee: " + retrievedEmployee);
                     } else {
